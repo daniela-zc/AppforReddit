@@ -5,7 +5,7 @@ const SubHeader = ({ category, onChangeCategory }) => {
     
     return (
     <Flexbox justifyContent="center" className= "selected-wrapper">
-      <div className= "selected-category"><h3> {category} </h3></div>
+      <div className= "selected-category"><h2> {category} </h2></div>
       <div className="select-options">
       <input type="text" 
         name="category_search" 

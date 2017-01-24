@@ -16,9 +16,9 @@ const BlockResult = ({ results }) => {
         var directionFlow = "row-reverse";
        }
       return ( 
-          <Flexbox justifyContent="center" className="block-wrapper" flexDirection={directionFlow}>
+          <Flexbox justifyContent="space-around" className="block-wrapper" flexDirection={directionFlow}>
             <div className = "div-item left-wrap" > 
-              <img src={resultData.thumbnail} MaxWidth='200px' MaxHeight='130px' />
+              <img src={resultData.thumbnail}  />
             </div>
             <div className = "div-item center-wrap" >
               <p> { resultData.title } </p>
@@ -32,9 +32,9 @@ const BlockResult = ({ results }) => {
   }
   
   return ( 
-    <div className="post-wrap row" width="500px" >
+    <Flexbox justifyContent="center" className="post-wrap row">
     {postsList}
-    </div>)  ;
+    </Flexbox>)  ;
   
 }
 

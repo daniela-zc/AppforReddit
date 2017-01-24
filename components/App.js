@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import Header from "./Header";
 import SubHeader from "../containers/SubHeaderContainer";
 import ContainerResult from "../containers/ContainerResult";
+import Footer from "./Footer";
 
 import Flexbox from 'flexbox-react';
 require("../src/style.css");
@@ -16,6 +17,7 @@ const App = () => (
       <Header />
       <SubHeader />
       <ContainerResult />
+      <Footer />
   </Flexbox>    
 );
 

@@ -1,15 +1,12 @@
-import React from 'react'
+import React from "react";
+import Flexbox from 'flexbox-react';
 
-const Footer = ({ categories, onTodoClick }) => (
-  <ul>
-    {categories.map(todo =>
-      <Todo
-        key={todo.id}
-        {...todo}
-        onClick={() => onTodoClick(todo.id)}
-      />
-    )}
-  </ul>
+const Footer = () => (
+  <Flexbox justifyContent="center" className="footer-wrapper" >
+  <div className="footer-item">
+  </div>
+  </Flexbox>   
 )
 
 export default Footer
+
