@@ -4,7 +4,8 @@ import { combineReducers } from 'redux';
 const initialState = {
   category: "Images",
   results: {},
-  isFetchingResults : false
+  isFetchingResults : false,
+  sendPost : {}
 }
 
 const RedditApp = (state = initialState , action) => {
@@ -22,6 +23,8 @@ const RedditApp = (state = initialState , action) => {
         isFetchingResults: false,
         results: action.results,
       })
+    case 'SEND_POST':
+      return { ...state, sendPost: action.sendPost }
     default:
       return state
   }

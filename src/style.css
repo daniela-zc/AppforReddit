@@ -26,6 +26,7 @@ h1, h2, h3 {
   font-size: 6em;
   font-weight: bold;
   text-align: center;
+  padding-right: 20px;
 }
 
 .head-item-2 {
@@ -33,27 +34,32 @@ h1, h2, h3 {
   padding-top: 150px;
 }
 
+.selected-wrapper-one{
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .selected-category, .select-options{
   font-size: 1.5em;
 }
 
-.selected-category{
-  width: 350px;
+.selected-category {
+  margin-top: 10px;
+  margin-left: 40px;
+}
+
+.select-options {
+  margin-top: 25px;
+  margin-right: 40px;
 }
 
 .select-options{
-  margin: 20px;
-}
-
-.select-options{
-  align-items: flex-end;
   height: 30px;
-  width: 200px;
   text-align: center;
   font-size: 14px;
 }
 .select-options input{
-    /* margin: 20px; */
     font-size: 1em;
     text-align: center;
     width: 250px;

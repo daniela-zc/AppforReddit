@@ -1,12 +1,12 @@
 import React from "react";
 import Flexbox from 'flexbox-react';
 
-const BlockResult = ({ results }) => { 
+const BlockResult = ({ results, onSendPost }) => { 
   var postsList = null;
   var counter = 0;
 
   if(results.length > 0){   
-      postsList = results.map(function(resultData) { 
+      postsList = results.map(function(resultData) {
       counter = counter + 1;
       // By default odd
       var directionFlow = "row";
@@ -16,7 +16,7 @@ const BlockResult = ({ results }) => {
         var directionFlow = "row-reverse";
        }
       return ( 
-          <Flexbox justifyContent="space-around" className="block-wrapper" flexDirection={directionFlow}>
+          <Flexbox key={resultData.url} justifyContent="space-around" className="block-wrapper" flexDirection={directionFlow}>
             <div className = "div-item left-wrap" > 
               <img src={resultData.thumbnail}  />
             </div>
@@ -24,7 +24,9 @@ const BlockResult = ({ results }) => {
               <p> { resultData.title } </p>
             </div>
             <div className = "div-item right-wrap" > 
-              <img src="./src/to_share.png" width='50px' height='50px' />
+              <a href="#" onClick={() => onSendPost(resultData)}>
+                <img src="./src/to_share.png" width='50px' height='50px' />
+              </a>
             </div>
           </Flexbox>
         ) ;
@@ -35,7 +37,6 @@ const BlockResult = ({ results }) => {
     <Flexbox justifyContent="center" className="post-wrap row">
     {postsList}
     </Flexbox>)  ;
-  
 }
 
 

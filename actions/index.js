@@ -24,7 +24,6 @@ function receivePosts(category, response) {
 }
 
 export function fetchResults(category) {
-
   return function (dispatch) {
     dispatch(requestPosts(category))
       return axios.get(`http://www.reddit.com/r/${category}.json`)
@@ -34,5 +33,12 @@ export function fetchResults(category) {
         .catch(function (error) {
           console.log(error);
         });
+  }
+}
+
+export const sendPost = (sendPost) => {
+  return {
+    type: 'SEND_POST',
+    sendPost
   }
 }
